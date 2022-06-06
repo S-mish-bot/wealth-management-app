@@ -37,10 +37,13 @@ return (
 		<Table striped bordered hover size="sm">
 <thead>
 	<tr>
+	<th>ID</th>
 	<th>Date</th>
 	<th>Description</th>
     <th>Location</th>
 	<th>Category</th>
+	<th>Update</th>
+	<th>Delete</th>
 
 
 	</tr>
@@ -52,6 +55,7 @@ return (
 	{array.map((item) => {
 return(
 <tr>
+	<td>{item.id}</td>
 	<td>{item.date}</td>
 	<td>{item.description}</td>
     <td>{item.location}</td>
@@ -67,8 +71,8 @@ return(
 
 	{/* Using thr deleted function passing
 	the id of an entry */}
-	<td><Button onClick={e => deleted(item.id)}
-	variant="danger">Delete</Button></td>
+	<td><Link to={`/expense`}><Button onClick={e => deleted(item.id)}
+	variant="danger">Delete</Button></Link></td>
 	</tr>
 )})}
 </tbody>

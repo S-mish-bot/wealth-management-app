@@ -28,7 +28,7 @@ function Create() {
 		// Fetching a value from usestate and
 		// pushing to javascript object
 		let a = date, b=description, c= location, d= category 
-		array.push({id:uni,Date:a,Description:b,Location:c,Category:d})
+		array.push({id:uni,date:a,description:b,location:c,category:d})
 
 
 	// Redirecting to home page after creation done
@@ -70,13 +70,14 @@ in a setname using usestate*/}
 
 	{/* handing a onclick event in button for
 	firing a function */}
-<Button
+
+<Link to={`/expense`}><Button
 onClick={e => handelSubmit(e)}
 	variant="primary" type="submit">
 	Submit
-</Button>
+</Button></Link>
 
-{/* Redirecting back to home page */}
+
 <Link className="d-grid gap-2" to='/expense'>
 	<Button variant="info" size="lg">
 	Expense

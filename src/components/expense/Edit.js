@@ -84,11 +84,14 @@ return (
 			</Form.Group>
 
 			{/* Hadinling an onclick event running an edit logic */}
-			<Button
+            <Link className="d-grid gap-2" to='/expense'>
+            <Button
 			onClick={e => handelSubmit(e)}
 			variant="primary" type="submit" size="lg">
 				Update
 			</Button>
+            </Link>
+           
 
 			{/* Redirecting to main page after editing */}
 			<Link className="d-grid gap-2" to='/expense'>
